@@ -103,43 +103,6 @@ Qiniu-JavaScript-SDK 的示例 Demo 中的服务器端部分是基于[ Node.js �
     ```
 
 
-### 安装
-
-支持以下几种安装方式
-
-- 直接使用CDN 加速的静态文件地址，访问[ 开放静态文件 CDN ](http://staticfile.org/)，搜索  qiniu
-
-    ```
-    https://cdn.staticfile.org/qiniu-JS-SDK/<version>/qiniu.min.js
-    ```
-
-- 使用 Bower 安装
-
-    Bower 是一个客户端技术的软件包管理器，它可用于搜索、安装和卸载如 JavaScript、HTML、CSS 之类的网络资源。如果需要更详细的关于 Bower 的使用说明，您可以访问[ Bower 官方网站](http://bower.io/)。
-
-    通过 Bower 安装会将 JS-SDK 依赖的 plupload 也一起安装在 `bower_components` 中：
-
-    ```
-    bower install qiniu
-    ```
-
-    执行之后，JS-SDK 和 plupload 分别在以下位置
-
-    ```
-    bower_components
-    ├── plupload
-    │   └── js
-    │       ├── moxie.js
-    │       ├── moxie.min.js
-    │       ├── plupload.dev.js
-    │       ├── plupload.full.min.js
-    │       └── plupload.min.js
-    └── qiniu
-        └── dist
-            ├── qiniu.js
-            ├── qiniu.min.js
-            └── qiniu.min.map
-    ```
 
 - 使用 NPM 安装
 
