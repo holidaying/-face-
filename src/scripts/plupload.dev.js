@@ -1597,12 +1597,12 @@ plupload.Uploader = function(options) {
 		max_retries: 0,
 		chunk_size: 0,
 		multipart: true,
-		multi_selection: false,
+		multi_selection: true,
 		file_data_name: 'file',
 		flash_swf_url: 'js/Moxie.swf',
 		silverlight_xap_url: 'js/Moxie.xap',
 		filters: {
-			mime_types: [{title : "choose face images", extensions : "jpg,gif,png,jpeg"}],
+			mime_types: [],
 			prevent_duplicates: false,
 			max_file_size: 0
 		},

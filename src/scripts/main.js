@@ -19,6 +19,14 @@ $(function() {
 
         auto_start: true,
         log_level: 5,
+        multi_selection: false,
+        filters: {
+            max_file_size: '100mb',
+            prevent_duplicates: true,
+            mime_types: [
+                { title: "Image files", extensions: "jpg,gif,jpeg,png" }, // 限定jpg,gif,png后缀上传
+            ]
+        },
         init: {
             'BeforeChunkUpload': function(up, file) {
                 console.log("before chunk upload:", file.name);
@@ -64,26 +72,22 @@ $(function() {
         },
 
     });
-    var labelMatch=
-    {
-        age:function(data)
-        {
+    var labelMatch = {
+        age: function(data) {
 
         },
-        headpose:function(data)
-        {
+        headpose: function(data) {
 
         },
-        smile:function(data)
-        {
+        smile: function(data) {
 
         },
-        dark_glasses:function()
-        {
+        dark_glasses: function() {
 
         }
 
     };
+
     function ajaxDetect(up, info) {
         var domain = up.getOption('domain');
         var res = $.parseJSON(info.response);
@@ -101,15 +105,15 @@ $(function() {
             },
             dataType: "json",
             success: function(res) {
-                
+
                 var resData = res.faces[0].attributes;
                 $(".man-sex").text(resData.gender.value)
                 $(".man-age").text(resData.age.value)
                 $(".man-smile").text(resData.smile.value)
-                // $(".man-left-eye").text(resData.eyestatus.left_eye_status.value)
-                // $(".man-right-eye").text(resData.eyestatus.right_eye_status.value)
+                    // $(".man-left-eye").text(resData.eyestatus.left_eye_status.value)
+                    // $(".man-right-eye").text(resData.eyestatus.right_eye_status.value)
                 $(".man-contry").text(resData.age.ethnicity)
-                $(".specil-get-box").css("opacity","1");
+                $(".specil-get-box").css("opacity", "1");
             },
             error: function(res) {
 
