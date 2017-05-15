@@ -1,6 +1,6 @@
 module.exports = {
-    'ACCESS_KEY': 'KSGgP2qwWt34dBmvTDbThdPWv4q0Jh6jtHNk92Jq',  // https://portal.qiniu.com/user/key
-    'SECRET_KEY': 'R19wVTWkcBZIk_csFaFI7V4G8SPCSgDZDw-n7Bxf',
+    'ACCESS_KEY': 'wks9oCWd4ZKII8cWG0999w9F7DgRIUk0-xQvkT0e',  // https://portal.qiniu.com/user/key
+    'SECRET_KEY': 'hQNB197a4Vsmm3jBtd-bQVdI0Ymbz9MKrASIMxpS',
     'Bucket_Name': 'imageserver',
     'Port': 19110,
     'Uptoken_Url': 'uptoken',
