@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>+face+</title>
+    <link href="images/favicon.ico" rel="shortcut icon">
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css" rel="stylesheet">
+    <script src="https://unpkg.com/leancloud-storage@^3.0.0-alpha/dist/av-min.js"></script>
+</head>
+
+<body>
+    <div class="container" style="padding-top: 60px;">
+        <input type="file" id="file">
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+</body>
+<script>
+AV.init({
+  appId: "WAmK2x1tmJr0Y7v0BCM6wHMo-gzGzoHsz",
+  appKey: "S16pY6nEqfUDug77dlL9aVP1",
+  region: 'cn'
+});
+$("#file").on("change", function() {
+    var localFile = $("#file")[0].files[0];
+    var file = new AV.File(localFile.name,localFile);
+    file.save().then(function(file) {
+        // 文件保存成功
+        console.log(file.url());
+    }, function(error) {
+        // 异常处理
+        console.error(error);
+    });
+})
+</script>
+
+</html>
